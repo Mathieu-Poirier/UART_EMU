@@ -47,7 +47,7 @@ OBJ_TEST     := $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/hosted/%.o,$(SRC_CPP)) 
 ##### flags #####
 CXXFLAGS_COMMON := -std=c++20 -Wall -Wextra -O2 -g -ffunction-sections -fdata-sections
 CXXFLAGS_FREESTANDING := -ffreestanding -fno-exceptions -fno-rtti -fno-builtin -fno-stack-protector \
-                         -fno-asynchronous-unwind-tables -fno-plt
+                         -fno-asynchronous-unwind-tables -fno-plt -Wno-main
 ASFLAGS_FREESTANDING  := -ffreestanding -nostdlib
 LDFLAGS_FREESTANDING  := -nostdlib -static -Wl,--gc-sections -Wl,--build-id=none
 LDLIBS_FREESTANDING   :=
