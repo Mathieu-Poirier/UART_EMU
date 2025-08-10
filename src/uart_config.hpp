@@ -14,12 +14,12 @@ enum class Endianness : Byte {
 class uart_config final {
     private:
         Rate baud_rate = 0;
-        Length data_bits_length = 0;
+        Length packet_length = 0;
         Endianness endianness = Endianness::LITTLE;
 
     public:
         constexpr uart_config() = default;
-        constexpr uart_config(const Rate& baud_rate, const Length& data_bits, const Endianness& endianness);
+        constexpr uart_config(const Rate& baud_rate, const Length& packet_length, const Endianness& endianness);
         
         uart_config(const uart_config& other) = default;
         uart_config& operator=(const uart_config& other) = default;
@@ -30,10 +30,10 @@ class uart_config final {
         ~uart_config() = default;
 
         constexpr Rate get_baud_rate() const noexcept;
-        constexpr Length get_data_bits_length() const noexcept;
+        constexpr Length get_packet_length() const noexcept;
         constexpr Endianness get_endianness() const noexcept;
 
         void set_baud_rate(const Rate& baud_rate) noexcept;
-        void set_data_bits(const Length& data_bits) noexcept;
+        void set_packet_length(const Length& packet_length) noexcept;
         void set_endianness(const Endianness& endianness) noexcept;
 };
