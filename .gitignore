@@ -1,2 +1,12 @@
 /build
 /dist
+/bin
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+compile_commands.json
+.clangd
+.cache
