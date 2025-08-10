@@ -14,7 +14,7 @@ public:
     registers() = default;
     virtual ~registers() = default;
 
-    virtual void dump_registers() const noexcept = 0;
+    [[nodiscard]] virtual const RegisterWidth* dump_registers() const noexcept = 0;
     virtual void write_register(RegisterWidth address, RegisterValue value) noexcept = 0;
     [[nodiscard]] virtual RegisterValue read_register(RegisterWidth address) const noexcept = 0;
     [[nodiscard]] virtual RegisterWidth get_register_width() const noexcept = 0;
