@@ -29,9 +29,9 @@ class uart_config final {
 
         ~uart_config() = default;
 
-        constexpr Rate get_baud_rate() const noexcept;
-        constexpr Length get_packet_length() const noexcept;
-        constexpr Endianness get_endianness() const noexcept;
+        [[nodiscard]] constexpr Rate get_baud_rate() const noexcept;
+        [[nodiscard]] constexpr Length get_packet_length() const noexcept;
+        [[nodiscard]] constexpr Endianness get_endianness() const noexcept;
 
         void set_baud_rate(const Rate& baud_rate) noexcept;
         void set_packet_length(const Length& packet_length) noexcept;
