@@ -134,7 +134,7 @@ installcheck:
 # clean tiers
 .PHONY: clean mostlyclean distclean maintainer-clean
 clean:
-	-rm -rf $(BUILD_DIR) $(BIN_DIR)
+	-rm -rf $(BUILD_DIR) $(BIN_DIR) .cache
 
 mostlyclean:
 	@$(MAKE) clean
