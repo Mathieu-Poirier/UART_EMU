@@ -1,9 +1,5 @@
 #include "uart_driver.hpp"
 
-void uart_driver::init() {
-    // Implement later
-}
+uart_driver::uart_driver(const uart_config &config, const uart_memory &memory)
+    : memory(memory), config(config) {}
 
-void uart_driver::close() {
-    // Implement later
-}
